@@ -1,5 +1,47 @@
+// Language switching functionality
+let currentLanguage = localStorage.getItem('language') || 'en';
+
+function switchLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    
+    // Update all elements with data-en and data-ar attributes
+    document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+        if (lang === 'ar') {
+            element.textContent = element.getAttribute('data-ar');
+        } else {
+            element.textContent = element.getAttribute('data-en');
+        }
+    });
+    
+    // Update document direction and language
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    
+    // Update body class for styling
+    document.body.classList.toggle('rtl', lang === 'ar');
+    
+    // Update language button text
+    const langBtn = document.querySelector('.lang-btn');
+    if (langBtn) {
+        langBtn.textContent = lang === 'ar' ? 'EN' : 'عربي';
+    }
+}
+
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language
+    switchLanguage(currentLanguage);
+    
+    // Add event listener to language toggle button
+    const langBtn = document.querySelector('.lang-btn');
+    if (langBtn) {
+        langBtn.addEventListener('click', () => {
+            const newLang = currentLanguage === 'en' ? 'ar' : 'en';
+            switchLanguage(newLang);
+        });
+    }
+    
     // Initialize all functionality
     initMobileMenu();
     initSmoothScrolling();
@@ -11,8 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Mobile Menu Functionality
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navMenu = document.querySelector('.nav-menu') || document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-link') || document.querySelectorAll('.nav-links a');
 
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', function() {
@@ -178,9 +220,11 @@ window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset;
     
     if (scrollTop > 100) {
+        header.classList.add('scrolled');
         header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
         header.style.backdropFilter = 'blur(10px)';
     } else {
+        header.classList.remove('scrolled');
         header.style.backgroundColor = '#FFFFFF';
         header.style.backdropFilter = 'none';
     }
@@ -342,6 +386,7 @@ if (typeof module !== 'undefined' && module.exports) {
         initSmoothScrolling,
         initTestimonialCarousel,
         validateEmail,
-        animateValue
+        animateValue,
+        switchLanguage
     };
 }

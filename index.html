@@ -9,25 +9,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Cairo for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <img src="images\logo.jpeg" alt="Fixly Logo" class="logo-img">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li><a href="#download" class="nav-link btn-download">Download App</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/logo.jpeg" alt="Fixly Logo" class="logo-img">
+                    <span class="logo-text">Fixly</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#how-it-works" class="nav-link" data-en="How It Works" data-ar="كيف يعمل">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#why-choose" class="nav-link" data-en="Why Choose Us" data-ar="لماذا تختارنا">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#testimonials" class="nav-link" data-en="Testimonials" data-ar="التقييمات">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#download" class="nav-link" data-en="Download" data-ar="التحميل">Download</a>
+                    </li>
+                </ul>
+                <div class="nav-controls">
+                    <div class="language-toggle">
+                        <button id="languageBtn" class="lang-btn">
+                            <span class="lang-text">العربية</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.87 15.07L10.33 12.56L10.36 12.53C12.1 10.59 13.34 8.36 14.07 6H17V4H10V2H8V4H1V6H12.17C11.5 7.92 10.44 9.75 9 11.35C8.07 10.32 7.3 9.19 6.69 8H4.69C5.42 9.63 6.42 11.17 7.67 12.56L2.58 17.58L4 19L9 14L12.11 17.11L12.87 15.07ZM18.5 10H16.5L12 22H14L15.12 19H19.87L21 22H23L18.5 10ZM15.88 17L17.5 12.67L19.12 17H15.88Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -35,39 +66,188 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
+            <div class="hero-background">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Home maintenance tools" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1 class="hero-title">Fixly: Your Expert for Home Services and Maintenance</h1>
-                        <p class="hero-subtitle">The fastest and easiest way to get reliable, on-demand home services. Get an expert for any job, big or small.</p>
-                        <a href="#download" class="btn btn-primary">Download the App Now</a>
+                        <h1 class="hero-title" data-en="All Your Home Problems in Your Pocket with Fixly" data-ar="جميع مشاكل بيتك في جيبك مع فيكسلي">All Your Home Problems in Your Pocket with Fixly</h1>
+                        <p class="hero-subtitle" data-en="Connect with verified professionals for all your home repair and maintenance needs. Fast, reliable, and smart solutions at your fingertips." data-ar="تواصل مع المهنيين المعتمدين لجميع احتياجات إصلاح وصيانة منزلك. حلول سريعة وموثوقة وذكية في متناول يدك.">Connect with verified professionals for all your home repair and maintenance needs. Fast, reliable, and smart solutions at your fingertips.</p>
+                        <div class="hero-buttons">
+                            <a href="#download" class="btn btn-primary" data-en="Download Now" data-ar="حمل الآن">Download Now</a>
+                            <a href="#how-it-works" class="btn btn-secondary" data-en="Learn More" data-ar="اعرف أكثر">Learn More</a>
+                        </div>
                     </div>
                     <div class="hero-image">
-                        <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <!-- House illustration -->
-                            <rect x="150" y="120" width="100" height="80" fill="#f8f9fa" stroke="#007BFF" stroke-width="2"/>
-                            <polygon points="150,120 200,80 250,120" fill="#007BFF"/>
-                            <rect x="170" y="140" width="15" height="25" fill="#007BFF"/>
-                            <rect x="210" y="140" width="15" height="25" fill="#007BFF"/>
-                            <rect x="185" y="170" width="15" height="30" fill="#212529"/>
-                            <!-- Tool icons floating around -->
-                            <g class="floating-icon" transform="translate(100,100)">
-                                <circle cx="0" cy="0" r="15" fill="#007BFF" opacity="0.1"/>
-                                <text x="-5" y="5" font-size="16">🔧</text>
-                            </g>
-                            <g class="floating-icon" transform="translate(300,140)">
-                                <circle cx="0" cy="0" r="15" fill="#007BFF" opacity="0.1"/>
-                                <text x="-5" y="5" font-size="16">🔨</text>
-                            </g>
-                            <g class="floating-icon" transform="translate(120,200)">
-                                <circle cx="0" cy="0" r="15" fill="#007BFF" opacity="0.1"/>
-                                <text x="-5" y="5" font-size="16">💡</text>
-                            </g>
-                            <g class="floating-icon" transform="translate(280,200)">
-                                <circle cx="0" cy="0" r="15" fill="#007BFF" opacity="0.1"/>
-                                <text x="-5" y="5" font-size="16">🪚</text>
-                            </g>
-                        </svg>
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Professional handyman with tools" class="hero-main-image">
+                        <div class="floating-tools">
+                            <div class="tool-icon tool-1">🔧</div>
+                            <div class="tool-icon tool-2">🔨</div>
+                            <div class="tool-icon tool-3">💡</div>
+                            <div class="tool-icon tool-4">🪚</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Details Section -->
+        <section id="app-details" class="app-details">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">📱</span>
+                        <span class="badge-text" data-en="Mobile App" data-ar="التطبيق المحمول">التطبيق المحمول</span>
+                    </div>
+                    <h2 class="section-title" data-en="Discover Fixly App Features" data-ar="اكتشف مميزات تطبيق فيكسلي">اكتشف مميزات تطبيق فيكسلي</h2>
+                    <p class="section-subtitle" data-en="Experience the power of smart home maintenance with our innovative mobile application designed for modern living" data-ar="اختبر قوة صيانة المنزل الذكي مع تطبيقنا المحمول المبتكر المصمم للحياة العصرية">اختبر قوة صيانة المنزل الذكي مع تطبيقنا المحمول المبتكر المصمم للحياة العصرية</p>
+                </div>
+
+                <div class="app-showcase-container">
+                    <!-- Features Grid -->
+                    <div class="features-section">
+                        <div class="features-grid">
+                            <div class="feature-card premium">
+                                <div class="feature-icon-wrapper">
+                                    <span class="feature-icon">🤖</span>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 data-en="AI-Powered Problem Detection" data-ar="كشف المشاكل بالذكاء الاصطناعي">كشف المشاكل بالذكاء الاصطناعي</h3>
+                                    <p data-en="Simply describe your issue or take a photo, and our AI will instantly identify the problem and suggest the best solution." data-ar="فقط اوصف مشكلتك أو التقط صورة، وسيقوم الذكاء الاصطناعي بتحديد المشكلة فوراً واقتراح أفضل حل.">فقط اوصف مشكلتك أو التقط صورة، وسيقوم الذكاء الاصطناعي بتحديد المشكلة فوراً واقتراح أفضل حل.</p>
+                                </div>
+                                <div class="feature-number">01</div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon-wrapper">
+                                    <span class="feature-icon">👨‍🔧</span>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 data-en="Verified Expert Network" data-ar="شبكة خبراء معتمدين">شبكة خبراء معتمدين</h3>
+                                    <p data-en="Access thousands of certified professionals in your area, all background-checked and rated by real customers." data-ar="الوصول إلى آلاف المهنيين المعتمدين في منطقتك، جميعهم تم فحصهم وتقييمهم من قبل عملاء حقيقيين.">الوصول إلى آلاف المهنيين المعتمدين في منطقتك، جميعهم تم فحصهم وتقييمهم من قبل عملاء حقيقيين.</p>
+                                </div>
+                                <div class="feature-number">02</div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon-wrapper">
+                                    <span class="feature-icon">⚡</span>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 data-en="Instant Booking & Scheduling" data-ar="حجز وجدولة فورية">حجز وجدولة فورية</h3>
+                                    <p data-en="Book appointments in seconds with real-time availability. Get same-day service for urgent repairs." data-ar="احجز المواعيد في ثوانٍ مع التوفر في الوقت الفعلي. احصل على خدمة في نفس اليوم للإصلاحات العاجلة.">احجز المواعيد في ثوانٍ مع التوفر في الوقت الفعلي. احصل على خدمة في نفس اليوم للإصلاحات العاجلة.</p>
+                                </div>
+                                <div class="feature-number">03</div>
+                            </div>
+                            
+                            <div class="feature-card premium">
+                                <div class="feature-icon-wrapper">
+                                    <span class="feature-icon">💰</span>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 data-en="Transparent Pricing" data-ar="أسعار شفافة">أسعار شفافة</h3>
+                                    <p data-en="Get upfront quotes with no hidden fees. Compare prices from multiple experts before you decide." data-ar="احصل على عروض أسعار مقدمة بدون رسوم خفية. قارن الأسعار من عدة خبراء قبل أن تقرر.">احصل على عروض أسعار مقدمة بدون رسوم خفية. قارن الأسعار من عدة خبراء قبل أن تقرر.</p>
+                                </div>
+                                <div class="feature-number">04</div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon-wrapper">
+                                    <span class="feature-icon">🔒</span>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 data-en="Secure Payment & Insurance" data-ar="دفع آمن وتأمين">دفع آمن وتأمين</h3>
+                                    <p data-en="All transactions are protected with bank-level security. Every job comes with insurance coverage." data-ar="جميع المعاملات محمية بأمان على مستوى البنوك. كل عمل يأتي مع تغطية تأمينية.">جميع المعاملات محمية بأمان على مستوى البنوك. كل عمل يأتي مع تغطية تأمينية.</p>
+                                </div>
+                                <div class="feature-number">05</div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon-wrapper">
+                                    <span class="feature-icon">📱</span>
+                                    <div class="icon-glow"></div>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 data-en="Real-Time Tracking" data-ar="تتبع في الوقت الفعلي">تتبع في الوقت الفعلي</h3>
+                                    <p data-en="Track your expert's location and get live updates on job progress. Stay informed every step of the way." data-ar="تتبع موقع الخبير واحصل على تحديثات مباشرة عن تقدم العمل. ابق على اطلاع في كل خطوة.">تتبع موقع الخبير واحصل على تحديثات مباشرة عن تقدم العمل. ابق على اطلاع في كل خطوة.</p>
+                                </div>
+                                <div class="feature-number">06</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone Showcase -->
+                    <div class="phone-showcase">
+                        <div class="showcase-background">
+                            <div class="floating-element element-1"></div>
+                            <div class="floating-element element-2"></div>
+                            <div class="floating-element element-3"></div>
+                        </div>
+                        
+                        <div class="phone-display">
+                            <div class="phone-container main-phone">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="images/fixly_app_home_screen.jpeg" alt="Fixly App Home Screen" class="phone-screenshot">
+                                    </div>
+                                    <div class="phone-reflection"></div>
+                                </div>
+                                <div class="phone-label">
+                                    <i class="fas fa-home"></i>
+                                    <span class="label-text" data-en="Smart Home" data-ar="الشاشة الذكية">Smart Home</span>
+                                </div>
+                            </div>
+
+                       
+                            <div class="phone-container side-phone left">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="images/fixly_app_category.jpeg" alt="Fixly App Categories" class="phone-screenshot">
+                                    </div>
+                                    <div class="phone-reflection"></div>
+                                </div>
+                                <div class="phone-label">
+                                    <i class="fas fa-cogs"></i>
+                                    <span class="label-text" data-en="Services" data-ar="الخدمات">Services</span>
+                                </div>
+                            </div>
+                            
+                            <div class="phone-container side-phone right">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="images/fixly_app_booking.jpeg" alt="Fixly App Booking" class="phone-screenshot">
+                                    </div>
+                                    <div class="phone-reflection"></div>
+                                </div>
+                                <div class="phone-label">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span class="label-text" data-en="Booking" data-ar="الحجز">Booking</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="app-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label" data-en="Downloads" data-ar="تحميل">Downloads</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">4.8</div>
+                                <div class="stat-label" data-en="Rating" data-ar="تقييم">Rating</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label" data-en="Support" data-ar="دعم">Support</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,51 +256,166 @@
         <!-- How It Works Section -->
         <section id="how-it-works" class="how-it-works">
             <div class="container">
-                <h2 class="section-title">How Fixly Works</h2>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-icon">1</div>
-                        <h3 class="step-title">Choose Your Service</h3>
-                        <p class="step-description">Select the service you need or chat with our AI assistant to describe your problem.</p>
+                <div class="section-header">
+                    <h2 class="section-title" data-en="How Fixly Works" data-ar="كيف يعمل فيكسلي">How Fixly Works</h2>
+                    <p class="section-subtitle" data-en="Get your home fixed in three simple steps" data-ar="أصلح منزلك في ثلاث خطوات بسيطة">Get your home fixed in three simple steps</p>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-visual">
+                            <div class="phone-mockup">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="images/fixly_app_category.jpeg" alt="Choose service on Fixly app" class="screen-image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-number">
+                                <span class="number">01</span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-badge">
+                                <span class="badge-icon">🔍</span>
+                                <span class="badge-text" data-en="STEP 1" data-ar="الخطوة 1">STEP 1</span>
+                            </div>
+                            <h3 class="step-title" data-en="Choose Your Service" data-ar="اختر خدمتك">Choose Your Service</h3>
+                            <p class="step-description" data-en="Browse through our comprehensive service categories or use the intelligent search to find exactly what you need for your home." data-ar="تصفح فئات الخدمات الشاملة لدينا أو استخدم البحث الذكي للعثور على ما تحتاجه بالضبط لمنزلك.">Browse through our comprehensive service categories or use the intelligent search to find exactly what you need for your home.</p>
+                            <div class="step-features">
+                                <span class="feature-tag">🏠 15+ Categories</span>
+                                <span class="feature-tag">⚡ Smart Search</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-icon">2</div>
-                        <h3 class="step-title">Describe Your Problem</h3>
-                        <p class="step-description">Type a description of your issue or record a voice note. Fixly will analyze it to find the perfect expert.</p>
+                    
+                    <div class="step-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow">→</div>
                     </div>
-                    <div class="step">
-                        <div class="step-icon">3</div>
-                        <h3 class="step-title">Get Your Expert</h3>
-                        <p class="step-description">Connect with a verified professional and track your request in real time.</p>
+                    
+                    <div class="step-card">
+                        <div class="step-visual">
+                            <div class="phone-mockup">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="images/fixly_app_home_screen.jpeg" alt="AI assistant on Fixly app" class="screen-image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-number">
+                                <span class="number">02</span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-badge">
+                                <span class="badge-icon">🤖</span>
+                                <span class="badge-text" data-en="STEP 2" data-ar="الخطوة 2">STEP 2</span>
+                            </div>
+                            <h3 class="step-title" data-en="Describe Your Problem" data-ar="اوصف مشكلتك">Describe Your Problem</h3>
+                            <p class="step-description" data-en="Use our AI-powered interface to describe your issue. The smart assistant understands natural language and helps you find the perfect solution." data-ar="استخدم واجهتنا المدعومة بالذكاء الاصطناعي لوصف مشكلتك. المساعد الذكي يفهم اللغة الطبيعية ويساعدك في إيجاد الحل المثالي.">Use our AI-powered interface to describe your issue. The smart assistant understands natural language and helps you find the perfect solution.</p>
+                            <div class="step-features">
+                                <span class="feature-tag">🎤 Voice Input</span>
+                                <span class="feature-tag">🧠 AI Assistant</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow">→</div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-visual">
+                            <div class="phone-mockup">
+                                <div class="phone-frame">
+                                    <div class="phone-screen">
+                                        <img src="images/fixly_app_booking.jpeg" alt="Book service on Fixly app" class="screen-image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-number">
+                                <span class="number">03</span>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-badge">
+                                <span class="badge-icon">📅</span>
+                                <span class="badge-text" data-en="STEP 3" data-ar="الخطوة 3">STEP 3</span>
+                            </div>
+                            <h3 class="step-title" data-en="Book & Track" data-ar="احجز وتتبع">Book & Track</h3>
+                            <p class="step-description" data-en="Complete your booking with just a few taps and track your service request in real-time until completion with live updates." data-ar="أكمل حجزك بضغطات قليلة وتتبع طلب الخدمة في الوقت الفعلي حتى الانتهاء مع التحديثات المباشرة.">Complete your booking with just a few taps and track your service request in real-time until completion with live updates.</p>
+                            <div class="step-features">
+                                <span class="feature-tag">📍 Live Tracking</span>
+                                <span class="feature-tag">💬 Real-time Updates</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">⏱️</div>
+                        <div class="summary-text">
+                            <h4 data-en="Average Time" data-ar="الوقت المتوسط">Average Time</h4>
+                            <p data-en="2-3 minutes to book" data-ar="2-3 دقائق للحجز">2-3 minutes to book</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">✨</div>
+                        <div class="summary-text">
+                            <h4 data-en="Success Rate" data-ar="معدل النجاح">Success Rate</h4>
+                            <p data-en="98% satisfaction" data-ar="98% رضا العملاء">98% satisfaction</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🚀</div>
+                        <div class="summary-text">
+                            <h4 data-en="Response Time" data-ar="وقت الاستجابة">Response Time</h4>
+                            <p data-en="Within 30 minutes" data-ar="خلال 30 دقيقة">Within 30 minutes</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Fixly Section -->
-        <section class="why-choose">
+        <section id="why-choose" class="why-choose">
             <div class="container">
-                <h2 class="section-title">Why Choose Fixly?</h2>
+                <h2 class="section-title" data-en="Why Choose Fixly?" data-ar="لماذا تختار فيكسلي؟">Why Choose Fixly?</h2>
                 <div class="features">
                     <div class="feature">
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80" alt="AI assistant technology" class="feature-img">
+                        </div>
                         <div class="feature-icon">🤖</div>
-                        <h3 class="feature-title">AI-Powered Smart Assistant</h3>
-                        <p class="feature-description">Our AI assistant understands your problem to suggest the best solution.</p>
+                        <h3 class="feature-title" data-en="AI-Powered Smart Assistant" data-ar="مساعد ذكي مدعوم بالذكاء الاصطناعي">AI-Powered Smart Assistant</h3>
+                        <p class="feature-description" data-en="Our AI assistant understands your problem to suggest the best solution." data-ar="مساعدنا الذكي يفهم مشكلتك ليقترح أفضل حل.">Our AI assistant understands your problem to suggest the best solution.</p>
                     </div>
                     <div class="feature">
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" alt="Voice recording technology" class="feature-img">
+                        </div>
                         <div class="feature-icon">🎤</div>
-                        <h3 class="feature-title">Voice-to-Text Feature</h3>
-                        <p class="feature-description">No need to type! Just speak your problem and our app will handle the rest.</p>
+                        <h3 class="feature-title" data-en="Voice-to-Text Feature" data-ar="ميزة التحويل من الصوت إلى النص">Voice-to-Text Feature</h3>
+                        <p class="feature-description" data-en="No need to type! Just speak your problem and our app will handle the rest." data-ar="لا حاجة للكتابة! فقط تحدث عن مشكلتك وتطبيقنا سيتولى الباقي.">No need to type! Just speak your problem and our app will handle the rest.</p>
                     </div>
                     <div class="feature">
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" alt="Professional verified expert" class="feature-img">
+                        </div>
                         <div class="feature-icon">✅</div>
-                        <h3 class="feature-title">Verified Professionals</h3>
-                        <p class="feature-description">We partner only with the best, most reliable experts in their fields.</p>
+                        <h3 class="feature-title" data-en="Verified Professionals" data-ar="مهنيون معتمدون">Verified Professionals</h3>
+                        <p class="feature-description" data-en="We partner only with the best, most reliable experts in their fields." data-ar="نتشارك فقط مع أفضل الخبراء الأكثر موثوقية في مجالاتهم.">We partner only with the best, most reliable experts in their fields.</p>
                     </div>
                     <div class="feature">
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" alt="Transparent pricing calculator" class="feature-img">
+                        </div>
                         <div class="feature-icon">💰</div>
-                        <h3 class="feature-title">Transparent Pricing</h3>
-                        <p class="feature-description">Get an estimated cost before you start, with no hidden fees.</p>
+                        <h3 class="feature-title" data-en="Transparent Pricing" data-ar="أسعار شفافة">Transparent Pricing</h3>
+                        <p class="feature-description" data-en="Get an estimated cost before you start, with no hidden fees." data-ar="احصل على تكلفة تقديرية قبل البدء، بدون رسوم خفية.">Get an estimated cost before you start, with no hidden fees.</p>
                     </div>
                 </div>
             </div>
@@ -129,36 +424,154 @@
         <!-- Services Section -->
         <section id="services" class="services">
             <div class="container">
-                <h2 class="section-title">Our Services</h2>
+                <h2 class="section-title" data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">⚡️</div>
-                        <h3 class="service-name">Electrical</h3>
+                        <div class="trust-indicator">✓</div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxواG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Professional electrician working safely" class="service-img">
+                        </div>
+                        <h3 class="service-name" data-en="Electrical" data-ar="الكهرباء">Electrical</h3>
+                        <p class="service-description" data-en="Professional electrical repairs and installations" data-ar="إصلاحات وتركيبات كهربائية احترافية">Professional electrical repairs and installations</p>
+                        <div class="help-badge">نحن هنا لمساعدتك</div>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">💧</div>
-                        <h3 class="service-name">Plumbing</h3>
+                        <div class="trust-indicator">🔧</div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Expert plumber fixing pipes" class="service-img">
+                        </div>
+                        <h3 class="service-name" data-en="Plumbing" data-ar="السباكة">Plumbing</h3>
+                        <p class="service-description" data-en="Expert plumbing solutions for your home" data-ar="حلول سباكة خبيرة لمنزلك">Expert plumbing solutions for your home</p>
+                        <div class="help-badge">خدمة موثوقة</div>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">❄️</div>
-                        <h3 class="service-name">AC & HVAC</h3>
+                        <div class="trust-indicator">❄️</div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AC technician providing quality service" class="service-img">
+                        </div>
+                        <h3 class="service-name" data-en="AC & HVAC" data-ar="التكييف والتهوية">AC & HVAC</h3>
+                        <p class="service-description" data-en="Climate control and air quality experts" data-ar="خبراء التحكم في المناخ وجودة الهواء">Climate control and air quality experts</p>
+                        <div class="help-badge">راحة مثالية</div>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🖌️</div>
-                        <h3 class="service-name">Painting</h3>
+                        <div class="trust-indicator">🎨</div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Professional painter creating beautiful spaces" class="service-img">
+                        </div>
+                        <h3 class="service-name" data-en="Painting" data-ar="الدهان">Painting</h3>
+                        <p class="service-description" data-en="Transform your space with professional painting" data-ar="حول مساحتك بالدهان الاحترافي">Transform your space with professional painting</p>
+                        <div class="help-badge">تحويل رائع</div>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🪚</div>
-                        <h3 class="service-name">Carpentry</h3>
+                        <div class="trust-indicator">🔨</div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Skilled carpenter crafting quality furniture" class="service-img">
+                        </div>
+                        <h3 class="service-name" data-en="Carpentry" data-ar="النجارة">Carpentry</h3>
+                        <p class="service-description" data-en="Custom woodwork and furniture solutions" data-ar="أعمال خشبية مخصصة وحلول أثاث">Custom woodwork and furniture solutions</p>
+                        <div class="help-badge">حرفية عالية</div>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🔌</div>
-                        <h3 class="service-name">Electronics</h3>
+                        <div class="trust-indicator">⚡</div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Electronics repair specialist at work" class="service-img">
+                        </div>
+                        <h3 class="service-name" data-en="Electronics" data-ar="الإلكترونيات">Electronics</h3>
+                        <p class="service-description" data-en="Reliable electronics repair and maintenance" data-ar="إصلاح وصيانة إلكترونيات موثوقة">Reliable electronics repair and maintenance</p>
+                        <div class="help-badge">تقنية متقدمة</div>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">✨</div>
-                        <h3 class="service-name">Cleaning</h3>
+                        <div class="trust-indicator">✨</div>
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxواG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Professional cleaning team ensuring spotless results" class="service-img">
+                        </div>
+                        <h3 class="service-name" data-en="Cleaning" data-ar="التنظيف">Cleaning</h3>
+                        <p class="service-description" data-en="Comprehensive cleaning for a healthier home" data-ar="تنظيف شامل لمنزل أكثر صحة">Comprehensive cleaning for a healthier home</p>
+                        <div class="help-badge">نظافة مثالية</div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Gallery Section -->
+        <section id="app-gallery" class="app-gallery">
+            <div class="container">
+                <div class="gallery-header">
+                    <h2 class="section-title" data-en="Experience Fixly App" data-ar="جرب تطبيق فيكسلي">Experience Fixly App</h2>
+                    <p class="section-subtitle" data-en="Discover the power of AI-driven home services at your fingertips" data-ar="اكتشف قوة خدمات المنزل المدعومة بالذكاء الاصطناعي في متناول يدك">Discover the power of AI-driven home services at your fingertips</p>
+                </div>
+                
+                <div class="gallery-showcase">
+                    <div class="showcase-phones">
+                        <div class="phone-display main-display">
+                            <div class="phone-device">
+                                <div class="phone-notch"></div>
+                                <div class="phone-content">
+                                    <img src="images/fixly_app_home_screen.jpeg" alt="Fixly App Home Screen" class="phone-image">
+                                </div>
+                                <div class="phone-indicator"></div>
+                            </div>
+                            <div class="display-info">
+                                <h3 data-en="AI-Powered Home" data-ar="منزل ذكي">AI-Powered Home</h3>
+                                <p data-en="Smart interface that learns your preferences" data-ar="واجهة ذكية تتعلم تفضيلاتك">Smart interface that learns your preferences</p>
+                                <div class="feature-tags">
+                                    <span class="tag">🤖 AI Assistant</span>
+                                    <span class="tag">⚡ Instant Search</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-display side-display">
+                            <div class="phone-device">
+                                <div class="phone-notch"></div>
+                                <div class="phone-content">
+                                    <img src="images/fixly_app_category.jpeg" alt="Fixly App Categories" class="phone-image">
+                                </div>
+                                <div class="phone-indicator"></div>
+                            </div>
+                            <div class="display-info">
+                                <h3 data-en="All Services" data-ar="جميع الخدمات">All Services</h3>
+                                <p data-en="Complete range of home services" data-ar="مجموعة كاملة من خدمات المنزل">Complete range of home services</p>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-display side-display">
+                            <div class="phone-device">
+                                <div class="phone-notch"></div>
+                                <div class="phone-content">
+                                    <img src="images/fixly_app_booking.jpeg" alt="Fixly App Booking" class="phone-image">
+                                </div>
+                                <div class="phone-indicator"></div>
+                            </div>
+                            <div class="display-info">
+                                <h3 data-en="Quick Booking" data-ar="حجز سريع">Quick Booking</h3>
+                                <p data-en="Book in seconds, not minutes" data-ar="احجز في ثوانٍ وليس دقائق">Book in seconds, not minutes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label" data-en="Happy Users" data-ar="مستخدم سعيد">Happy Users</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label" data-en="Services" data-ar="خدمة">Services</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.9★</div>
+                            <div class="stat-label" data-en="App Rating" data-ar="تقييم التطبيق">App Rating</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-cta">
+                    <a href="#download" class="btn btn-primary enhanced" data-en="Download Fixly Now" data-ar="حمل فيكسلي الآن">
+                        <span class="btn-icon">📱</span>
+                        <span class="btn-text">Download Fixly Now</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -166,25 +579,35 @@
         <!-- Testimonials Section -->
         <section id="testimonials" class="testimonials">
             <div class="container">
-                <h2 class="section-title">What Our Users Say</h2>
-                <div class="testimonials-container">
-                    <div class="testimonial active">
-                        <p class="testimonial-text">"Fixly saved me! I had an electrical issue, and within minutes I was able to connect with a technician who fixed it. A truly amazing service."</p>
-                        <p class="testimonial-author">- John A.</p>
+                <h2 class="section-title" data-en="What Our Customers Say" data-ar="ماذا يقول عملاؤنا">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Ahmed Customer" class="testimonial-img">
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text" data-en="Fixly saved me hours of searching for a reliable plumber. The AI understood my problem immediately and connected me with an expert who fixed my issue the same day!" data-ar="فيكسلي وفر علي ساعات من البحث عن سباك موثوق. الذكاء الاصطناعي فهم مشكلتي فوراً وربطني بخبير حل مشكلتي في نفس اليوم!">Fixly saved me hours of searching for a reliable plumber. The AI understood my problem immediately and connected me with an expert who fixed my issue the same day!</p>
+                        <h4 class="customer-name" data-en="Ahmed Al-Rashid" data-ar="أحمد الراشد">Ahmed Al-Rashid</h4>
+                        <p class="customer-title" data-en="Homeowner" data-ar="مالك منزل">Homeowner</p>
                     </div>
                     <div class="testimonial">
-                        <p class="testimonial-text">"I tried the voice note feature, and it was a great experience! I felt like they understood the problem perfectly."</p>
-                        <p class="testimonial-author">- Jane M.</p>
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxواG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Sarah Customer" class="testimonial-img">
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text" data-en="The voice feature is amazing! I just described my car problem while driving, and by the time I got home, I had three qualified mechanics ready to help." data-ar="ميزة الصوت رائعة! وصفت مشكلة سيارتي أثناء القيادة، وبحلول وصولي للمنزل، كان لدي ثلاثة ميكانيكيين مؤهلين جاهزين للمساعدة.">The voice feature is amazing! I just described my car problem while driving, and by the time I got home, I had three qualified mechanics ready to help.</p>
+                        <h4 class="customer-name" data-en="Sarah Johnson" data-ar="سارة جونسون">Sarah Johnson</h4>
+                        <p class="customer-title" data-en="Business Owner" data-ar="صاحبة عمل">Business Owner</p>
                     </div>
                     <div class="testimonial">
-                        <p class="testimonial-text">"The interaction with the technicians was excellent. The rating system made me confident in the quality of service."</p>
-                        <p class="testimonial-author">- Sarah B.</p>
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Omar Customer" class="testimonial-img">
+                        </div>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text" data-en="Transparent pricing and verified professionals - exactly what I was looking for. No more worrying about getting overcharged or dealing with unreliable service providers." data-ar="أسعار شفافة ومهنيون معتمدون - بالضبط ما كنت أبحث عنه. لا مزيد من القلق بشأن الرسوم المبالغ فيها أو التعامل مع مقدمي خدمة غير موثوقين.">Transparent pricing and verified professionals - exactly what I was looking for. No more worrying about getting overcharged or dealing with unreliable service providers.</p>
+                        <h4 class="customer-name" data-en="Omar Hassan" data-ar="عمر حسان">Omar Hassan</h4>
+                        <p class="customer-title" data-en="Property Manager" data-ar="مدير عقارات">Property Manager</p>
                     </div>
-                </div>
-                <div class="testimonial-dots">
-                    <span class="dot active" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
                 </div>
             </div>
         </section>
@@ -192,32 +615,21 @@
         <!-- Download Section -->
         <section id="download" class="download">
             <div class="container">
-                <h2 class="section-title">Ready to Experience Fixly?</h2>
-                <p class="download-subtitle">Download the app now and enjoy fast, reliable, and smart home services.</p>
                 <div class="download-content">
-                    <div class="download-buttons">
-                        <a href="#" class="download-btn">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiByeD0iNSIgZmlsbD0iIzAwMDAwMCIvPgo8dGV4dCB4PSI2MCIgeT0iMjUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFwcCBTdG9yZTwvdGV4dD4KPHN2Zz4K" alt="Download on App Store">
-                        </a>
-                        <a href="#" class="download-btn">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiByeD0iNSIgZmlsbD0iIzAwMDAwMCIvPgo8dGV4dCB4PSI2MCIgeT0iMjUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdvb2dsZSBQbGF5PC90ZXh0Pgo8L3N2Zz4K" alt="Get it on Google Play">
-                        </a>
+                    <div class="download-text">
+                        <h2 class="section-title" data-en="Get Fixly Today" data-ar="احصل على فيكسلي اليوم">Get Fixly Today</h2>
+                        <p class="section-subtitle" data-en="Download our app and experience the future of home services. Available on all platforms." data-ar="حمل تطبيقنا واختبر مستقبل الخدمات المنزلية. متوفر على جميع المنصات.">Download our app and experience the future of home services. Available on all platforms.</p>
+                        <div class="app-buttons">
+                            <a href="https://play.google.com/store/apps/details?id=com.fixlyapp.salah" target="_blank" class="app-btn">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="store-badge">
+                            </a>
+                            <a href="#" class="app-btn">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="store-badge">
+                            </a>
+                        </div>
                     </div>
-                    <div class="qr-code">
-                        <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <!-- QR Code pattern -->
-                            <rect width="120" height="120" fill="white" stroke="#007BFF" stroke-width="2"/>
-                            <rect x="10" y="10" width="20" height="20" fill="#007BFF"/>
-                            <rect x="90" y="10" width="20" height="20" fill="#007BFF"/>
-                            <rect x="10" y="90" width="20" height="20" fill="#007BFF"/>
-                            <rect x="50" y="50" width="20" height="20" fill="#007BFF"/>
-                            <!-- Additional QR pattern elements -->
-                            <rect x="40" y="20" width="10" height="10" fill="#007BFF"/>
-                            <rect x="70" y="30" width="10" height="10" fill="#007BFF"/>
-                            <rect x="30" y="60" width="10" height="10" fill="#007BFF"/>
-                            <rect x="80" y="70" width="10" height="10" fill="#007BFF"/>
-                            <text x="60" y="115" text-anchor="middle" font-size="8" fill="#007BFF">Scan to Download</text>
-                        </svg>
+                    <div class="phone-mockup">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" alt="Fixly App on Mobile" class="phone-image">
                     </div>
                 </div>
             </div>
@@ -229,18 +641,30 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-nav">
-                    <a href="#" class="footer-link">About Us</a>
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Terms of Use</a>
+                    <a href="#" class="footer-link" data-en="About Us" data-ar="من نحن">About Us</a>
+                    <a href="#" class="footer-link" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+                    <a href="#" class="footer-link" data-en="Terms of Use" data-ar="شروط الاستخدام">Terms of Use</a>
                 </div>
                 <div class="social-media">
-                    <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="https://www.facebook.com/share/1BDiU2yJqR/" target="_blank" class="social-link" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@fixly.com?_t=ZS-8ztLiIeB0dj&_r=1" target="_blank" class="social-link" title="TikTok">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/fixlycompany/" target="_blank" class="social-link" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Fixly. All rights reserved.</p>
+                <p data-en="&copy; 2024 Fixly. All rights reserved." data-ar="&copy; 2024 فيكسلي. جميع الحقوق محفوظة.">&copy; 2024 Fixly. All rights reserved.</p>
             </div>
         </div>
     </footer>
